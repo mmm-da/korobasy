@@ -10,7 +10,7 @@ services:
     command: python manage.py runserver
     restart: always
     depends_on:
-      - app-frontend-builder
+      - app_frontend_builder
     volumes:
       - .:/app
 
