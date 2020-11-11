@@ -1,0 +1,11 @@
+.search_bar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 8px;
+}
+
+.search_input{
+    width: 90%;
+}

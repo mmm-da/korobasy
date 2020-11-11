@@ -1,0 +1,32 @@
+.navbar{
+    display: flex;
+    align-items: center;
+
+    margin: 5px 36px;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.navbar-item{
+    color: #3B434E;
+    text-decoration: none;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.navbar-logo{
+    color: #EEA35D;
+
+    font-size: 3em;
+    font-family: 'Amatic SC', cursive;
+}
+
+.navbar-logo:hover{
+    color: #ffc98d;
+}
+
+.push_right{
+    margin-right: 0px;
+    margin-left: auto;
+}
