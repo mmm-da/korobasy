@@ -1,8 +1,8 @@
 services: 
-  app_backend:
+  dev_backend:
     container_name: korobasy_backend
     build:
-      dockerfile: backend.dockerfile
+      dockerfile: dev_backend.dockerfile
       context: .
     environment:
       - DEBUG=true
@@ -10,15 +10,23 @@ services:
     command: python manage.py runserver
     restart: always
     depends_on:
-      - app_frontend_builder
+      - dev_frontend
+    working_dir: /app/
     volumes:
-      - .:/app
+      - .:/app:delegated
+    ports:
+      - "8000:8000"
 
-  app_frontend_builder:
+  dev_frontend:
     build:
-      dockerfile: frontend_builder.dockerfile
+      dockerfile: dev_frontend.dockerfile
       context: .
+    environment:
+      - CI=true
     command: npm start
     restart: always
     volumes:
-      - .:/app
+      - ./frontend/src:/frontend/src
+      - ./frontend/public:/frontend/public
+    ports:
+      - "3000:3000"
