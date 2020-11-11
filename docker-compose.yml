@@ -1,0 +1,24 @@
+services: 
+  app_backend:
+    container_name: korobasy_backend
+    build:
+      dockerfile: backend.dockerfile
+      context: .
+    environment:
+      - DEBUG=true
+      - PYTHONUNBUFFERED=1
+    command: python manage.py runserver
+    restart: always
+    depends_on:
+      - app-frontend-builder
+    volumes:
+      - .:/app
+
+  app_frontend_builder:
+    build:
+      dockerfile: frontend_builder.dockerfile
+      context: .
+    command: npm start
+    restart: always
+    volumes:
+      - .:/app
