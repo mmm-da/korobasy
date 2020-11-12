@@ -1,23 +1,32 @@
+version: "3.8"
+
 services: 
   dev_backend:
-    container_name: korobasy_backend
+    container_name: korobasy_dev_backend
     build:
       dockerfile: dev_backend.dockerfile
       context: .
     environment:
       - DEBUG=true
       - PYTHONUNBUFFERED=1
-    command: python manage.py runserver
+      - SECRET_KEY=secret
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=korobasy
+      - POSTGRES_PORT=5432
+    command: sh ./run_django.sh
     restart: always
     depends_on:
       - dev_frontend
+      - database
     working_dir: /app/
     volumes:
-      - .:/app:delegated
+      - .:/app
     ports:
       - "8000:8000"
 
   dev_frontend:
+    container_name: korobasy_dev_frontend
     build:
       dockerfile: dev_frontend.dockerfile
       context: .
@@ -30,3 +39,13 @@ services:
       - ./frontend/public:/frontend/public
     ports:
       - "3000:3000"
+
+  database:
+    container_name: korobasy_dev_postgres
+    image: postgres:13
+    environment: 
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=korobasy
+    ports:
+      - "5432:5432"

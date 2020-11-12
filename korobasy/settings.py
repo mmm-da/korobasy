@@ -1,14 +1,12 @@
+from os import environ
 from pathlib import Path
 from django.conf import settings
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
-SECRET_KEY = '+2z-e64sy0b=--o%k_ln71c+s+@e6m9^dnkkrfnsw#06g4i#n9'
-
-DEBUG = True
-
+SECRET_KEY = environ['SECRET_KEY']
+DEBUG = environ['DEBUG']
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
@@ -50,13 +48,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'korobasy.wsgi.application'
 
-if settings.DEBUG:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': 'database',
+        'PORT': environ['POSTGRES_PORT'],
+        'NAME': environ['POSTGRES_DB'],
+        'USER': environ['POSTGRES_USER'],
+        'PASSWORD': environ['POSTGRES_PASSWORD']
     }
+}
 
 LANGUAGE_CODE = 'en-us'
 
