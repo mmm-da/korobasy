@@ -1,11 +1,12 @@
 .navbar{
     display: flex;
     align-items: center;
-
-    margin: 5px 36px;
-
+    
+    height: 80px;
     padding-top: 16px;
     padding-bottom: 16px;
+    padding-left: 48px;
+    padding-right: 48px;
 }
 
 .navbar-item{
@@ -26,7 +27,7 @@
     color: #ffc98d;
 }
 
-.push_right{
+.push-right{
     margin-right: 0px;
     margin-left: auto;
 }

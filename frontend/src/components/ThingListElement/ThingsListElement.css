@@ -1,4 +1,4 @@
-.things_list_element{
+.things-list-element{
     display: grid;
     grid-template-columns: 3em auto 30%;
     grid-template-rows: 3em 3em;
@@ -18,40 +18,42 @@ a{
     text-decoration: none;
 }
 
-.things_list_element:hover{
+.things-list-element:hover{
     color: #3B434E;
-    background-color: #eeeeee;
+    background-color: #eeebe3;
 }
 
-.things_list_element_icon{
+.things-list-element-icon{
     height: 3em;
     width: 3em;
+    margin: 12px;
     grid-area: icon;
     justify-self: center;
 }
 
-.things_list_element_title{
+.things-list-element-title{
     grid-area: title;
     font-size: 1.5em;
     justify-self: self-start;
 }
 
-.things_list_element_place{
+.things-list-element-place{
     grid-area: place;
     font-size: 1em;
     justify-self: self-start;
 }
 
-.things_list_element_reserve{
+.things-list-element-reserve{
     grid-area: reserve;
     font-size: 0.8em;
     align-self: center;
     justify-self: self-end;
 }
 
-.things_list_element_count{
+.things-list-element-count{
     grid-area: count;
     color: #EEA35D;
     font-size: 2em;
+    font-weight: 600;
     justify-self: self-end;
 }

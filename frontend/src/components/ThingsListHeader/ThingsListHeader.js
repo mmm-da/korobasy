@@ -3,7 +3,7 @@ import './ThingsListHeader.css'
 
 export default function ThingsListHeader(){
     return(
-        <div className="things_list_header">
+        <div className="things-list-header">
             <h2 className="title">Все штуки</h2>
             <div>
                 <button>Добавить штуку</button>

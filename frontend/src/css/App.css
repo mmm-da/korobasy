@@ -1,7 +1,6 @@
 body{
-    padding:0;
-    height:100%;
-
+    margin: 0;
+    height: 100%;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 1em;
@@ -71,4 +70,21 @@ button:hover{
     min-height: 100vh;
     flex-direction: column;
     align-content: space-between;
+}
+
+table{
+    background-color: #eeebe3;
+    margin: 0px;
+    padding: 16px;
+    border-radius: 7px;
+    border-collapse:separate;
+    border-spacing: 8px;
+}
+
+tr,td{
+    text-align: justify;
+}
+
+.container{
+    min-height: calc(100vh - 80px);
 }

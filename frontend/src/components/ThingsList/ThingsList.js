@@ -5,7 +5,7 @@ import "./ThingsList.css"
 
 export default function ThingsList(){
     return(
-        <div className="things_list">
+        <div className="things-list">
             <ThingsListHeader/>
             <ThingsListElement/>
             <ThingsListElement/>

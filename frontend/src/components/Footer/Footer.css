@@ -1,6 +1,8 @@
 .footer{
-    padding-top: 16px;
+    line-height:80px;
+    height: 80px;
     text-align: center;
+    vertical-align: middle;
     font-size: 0.9em;
 }
 

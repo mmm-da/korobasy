@@ -10,22 +10,23 @@ import Footer from "./components/Footer/Footer";
 import RegisterView from "./views/RegisterView/RegisterView";
 import MainView from "./views/MainView/MainView";
 import AuthView from "./views/AuthView/AuthView";
+import ThingView from "./views/ThingView/ThingView";
 
-import "./css/tags_overide.css"
+import "./css/App.css"
 
 export default function App(){
     return(
         <Router>
-            <div className="app">
+            <div className="container">
                 <NavBar/>
-                <Switch>
-                    <Route exact path="/" component={MainView}/>
-                    <Route path="/auth" component={AuthView}/>
-                    <Route path="/register" component={RegisterView}/>
-                    <Route path="/thing" component={RegisterView}/>
-                </Switch>
-                <Footer/>
+                    <Switch>
+                        <Route exact path="/" component={MainView}/>
+                        <Route path="/auth" component={AuthView}/>
+                        <Route path="/register" component={RegisterView}/>
+                        <Route path="/thing" component={ThingView}/>
+                    </Switch>
             </div>
+            <Footer/>
         </Router>
     )
 }
