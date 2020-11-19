@@ -19,7 +19,6 @@ services:
     depends_on:
       - dev_frontend
       - database
-    working_dir: /app/
     volumes:
       - .:/app
     ports:
