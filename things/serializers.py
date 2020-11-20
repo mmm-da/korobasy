@@ -1,14 +1,7 @@
-from rest_framework.serializers import ModelSerializer
-from things.models import Thing, ThingInstance
+from rest_framework import serializers 
+from things.models import Thing
 
-
-class ThingSerializer(ModelSerializer):
+class ThingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Thing
-        fields = ['id', 'name', 'description']
-
-
-class ThingInstanceSerializer(ModelSerializer):
-    class Meta:
-        model = ThingInstance
-        fields = ['id', 'storage', 'type','count']
+        fields = ('id', 'name','description')

@@ -6,8 +6,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 SECRET_KEY = environ['SECRET_KEY']
-DEBUG = environ['DEBUG']
-ALLOWED_HOSTS = []
+DEBUG = int(environ.get("DEBUG", default=0))
+ALLOWED_HOSTS = environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 
 INSTALLED_APPS = [
     'django.contrib.auth',
@@ -27,6 +27,13 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware'
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    ]
+}
 
 ROOT_URLCONF = 'korobasy.urls'
 
