@@ -1,6 +1,6 @@
 import React from "react";
 import {
-    BrowserRouter as Router,
+    BrowserRouter,
     Switch,
     Route
 } from "react-router-dom";
@@ -16,7 +16,7 @@ import "./css/App.css"
 
 export default function App(){
     return(
-        <Router>
+        <BrowserRouter>
             <div className="container">
                 <NavBar/>
                     <Switch>
@@ -27,6 +27,6 @@ export default function App(){
                     </Switch>
             </div>
             <Footer/>
-        </Router>
+        </BrowserRouter>
     )
 }
