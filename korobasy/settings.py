@@ -4,10 +4,9 @@ from django.conf import settings
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 SECRET_KEY = environ['SECRET_KEY']
 DEBUG = int(environ.get("DEBUG", default=0))
-ALLOWED_HOSTS = environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
+ALLOWED_HOSTS = environ["DJANGO_ALLOWED_HOSTS"].split(" ")
 
 INSTALLED_APPS = [
     'django.contrib.auth',
@@ -30,28 +29,12 @@ MIDDLEWARE = [
 
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
-        'rest_framework.renderers.JSONRenderer',
-        'rest_framework.renderers.BrowsableAPIRenderer',
+        'rest_framework.renderers.JSONRenderer'
     ]
 }
 
+AUTH_USER_MODEL = 'users.CustomUser'
 ROOT_URLCONF = 'korobasy.urls'
-
-TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
-        },
-    },
-]
 
 WSGI_APPLICATION = 'korobasy.wsgi.application'
 
