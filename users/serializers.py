@@ -1,9 +1,9 @@
 from rest_framework import serializers 
 from storages.models import Storage
-from .models import CustomUser
+from django.contrib.auth.models import User
 
 class UserSerializer(serializers.ModelSerializer):
     storages = serializers.PrimaryKeyRelatedField(many=True, queryset=Storage.objects.all())
     class Meta:
-        model = CustomUser
-        fields = ('id', 'email','username','storages')
+        model = User
+        fields = ('username','email','first_name','last_name','storages')

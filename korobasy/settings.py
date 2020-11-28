@@ -16,7 +16,11 @@ INSTALLED_APPS = [
     'users',
     'storages',
     'things',
-    'rest_framework'
+    'rest_framework',
+    'corsheaders',
+    'taggit',
+    'taggit_serializer',
+    'django_extensions'
 ]
 
 MIDDLEWARE = [
@@ -29,11 +33,16 @@ MIDDLEWARE = [
 
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
-        'rest_framework.renderers.JSONRenderer'
-    ]
+        'rest_framework.renderers.JSONRenderer',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
 }
 
-AUTH_USER_MODEL = 'users.CustomUser'
 ROOT_URLCONF = 'korobasy.urls'
 
 WSGI_APPLICATION = 'korobasy.wsgi.application'

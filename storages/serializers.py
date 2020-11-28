@@ -1,15 +1,19 @@
-from rest_framework import serializers 
+from rest_framework import serializers
 from storages.models import Storage,Section
-from things.models import ThingsInstance
+from things.models import ThingInstance
+from taggit_serializer.serializers import (TagListSerializerField,
+                                           TaggitSerializer)
 
-class StorageSerializer(serializers.ModelSerializer):
+class StorageSerializer(TaggitSerializer,serializers.ModelSerializer,):
+    tags = TagListSerializerField()
     sections = serializers.PrimaryKeyRelatedField(many=True, queryset=Section.objects.all())
+    owner = serializers.ReadOnlyField(source='owner.username')
     class Meta:
         model = Storage
-        fields = ('id', 'name','owner','sections')
+        fields = ('id', 'name','owner','sections','tags')
 
 class SectionSerializer(serializers.ModelSerializer):
-    things_instances = serializers.PrimaryKeyRelatedField(many=True,queryset=ThingsInstance.objects.all())
+    things_in_sections = serializers.PrimaryKeyRelatedField(many=True,queryset=ThingInstance.objects.all())
     class Meta:
         model = Section
-        fields = ('id', 'name','storage','things_instances')
+        fields = ('id', 'name','storage','things_in_sections')
