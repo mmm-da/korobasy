@@ -1,0 +1,218 @@
+[
+    {
+        "model": "storages.Storage",
+        "fields": {
+            "id": "c2e9f25d-9ae5-4693-af3f-2480735ee826",
+            "name": "Хранилище №509845042",
+            "owner": 1
+        }
+    },
+    {
+        "model": "storages.Storage",
+        "fields": {
+            "id": "ca0d6178-bc33-4bf9-ab29-1679dd6bfb09",
+            "name": "Хранилище №346643941",
+            "owner": 1
+        }
+    },
+    {
+        "model": "storages.Storage",
+        "fields": {
+            "id": "e8e06de2-f8e2-4fd1-b369-90dd81fd1d56",
+            "name": "Хранилище №396243914",
+            "owner": 1
+        }
+    },
+    {
+        "model": "storages.Storage",
+        "fields": {
+            "id": "121e2447-5523-4f03-aa46-732a0e4decee",
+            "name": "Хранилище №286501144",
+            "owner": 1
+        }
+    },
+    {
+        "model": "storages.Storage",
+        "fields": {
+            "id": "0e23d253-a92e-4a6f-99a4-53acac3b9887",
+            "name": "Хранилище №138045932",
+            "owner": 1
+        }
+    },
+    {
+        "model": "storages.Storage",
+        "fields": {
+            "id": "3c3c8bdd-6a0a-4004-8ad3-d1eb198783c2",
+            "name": "Хранилище №699145924",
+            "owner": 1
+        }
+    },
+    {
+        "model": "storages.Section",
+        "fields": {
+            "id": "73f324e3-6353-465f-978a-9b90b42beecb",
+            "name": "Секция 194001076",
+            "storage": "c2e9f25d-9ae5-4693-af3f-2480735ee826"
+        }
+    },
+    {
+        "model": "storages.Section",
+        "fields": {
+            "id": "5808eee2-ad8c-415d-8fbd-ee13d1cae76b",
+            "name": "Секция 884343104",
+            "storage": "121e2447-5523-4f03-aa46-732a0e4decee"
+        }
+    },
+    {
+        "model": "storages.Section",
+        "fields": {
+            "id": "9486b7f5-0767-4b0b-a215-6fae36c30303",
+            "name": "Секция 465643656",
+            "storage": "121e2447-5523-4f03-aa46-732a0e4decee"
+        }
+    },
+    {
+        "model": "storages.Section",
+        "fields": {
+            "id": "1b32e14c-4606-4eb3-9bab-f46b17ddf248",
+            "name": "Секция 277143887",
+            "storage": "c2e9f25d-9ae5-4693-af3f-2480735ee826"
+        }
+    },
+    {
+        "model": "storages.Section",
+        "fields": {
+            "id": "3f6ab15f-fd46-47e1-b082-39b28973bb24",
+            "name": "Секция 673401941",
+            "storage": "e8e06de2-f8e2-4fd1-b369-90dd81fd1d56"
+        }
+    },
+    {
+        "model": "storages.Section",
+        "fields": {
+            "id": "3f09eee1-3dbe-4721-baa2-679728b8f7fb",
+            "name": "Секция 710201861",
+            "storage": "3c3c8bdd-6a0a-4004-8ad3-d1eb198783c2"
+        }
+    },
+    {
+        "model": "storages.Section",
+        "fields": {
+            "id": "e2b365ef-8f85-4e39-b791-502750238de6",
+            "name": "Секция 529145685",
+            "storage": "0e23d253-a92e-4a6f-99a4-53acac3b9887"
+        }
+    },
+    {
+        "model": "storages.Section",
+        "fields": {
+            "id": "aaf68f9d-0363-4b5c-bece-9606f3bd021d",
+            "name": "Секция 810144848",
+            "storage": "0e23d253-a92e-4a6f-99a4-53acac3b9887"
+        }
+    },
+    {
+        "model": "storages.Section",
+        "fields": {
+            "id": "2d823daa-373f-401b-bd97-aa62ccea5218",
+            "name": "Секция 433244721",
+            "storage": "3c3c8bdd-6a0a-4004-8ad3-d1eb198783c2"
+        }
+    },
+    {
+        "model": "storages.Section",
+        "fields": {
+            "id": "603680f5-f015-4bfe-901b-06f7ea14c5f0",
+            "name": "Секция 092545228",
+            "storage": "c2e9f25d-9ae5-4693-af3f-2480735ee826"
+        }
+    },
+    {
+        "model": "storages.Section",
+        "fields": {
+            "id": "8277cadd-1a5a-4fba-88f2-c3dbb819a43c",
+            "name": "Секция 311945459",
+            "storage": "e8e06de2-f8e2-4fd1-b369-90dd81fd1d56"
+        }
+    },
+    {
+        "model": "storages.Section",
+        "fields": {
+            "id": "c90eea77-20e0-4582-bff7-4c749212ab52",
+            "name": "Секция 121145897",
+            "storage": "3c3c8bdd-6a0a-4004-8ad3-d1eb198783c2"
+        }
+    },
+    {
+        "model": "storages.Section",
+        "fields": {
+            "id": "b2989498-32d3-4d07-9dca-2e62a48ca550",
+            "name": "Секция 666301565",
+            "storage": "3c3c8bdd-6a0a-4004-8ad3-d1eb198783c2"
+        }
+    },
+    {
+        "model": "storages.Section",
+        "fields": {
+            "id": "194b15d0-3b35-4099-9164-b7dad9e3cc52",
+            "name": "Секция 389101341",
+            "storage": "e8e06de2-f8e2-4fd1-b369-90dd81fd1d56"
+        }
+    },
+    {
+        "model": "storages.Section",
+        "fields": {
+            "id": "08c7d8e5-287c-49c4-a27d-2523734e52f8",
+            "name": "Секция 702745618",
+            "storage": "3c3c8bdd-6a0a-4004-8ad3-d1eb198783c2"
+        }
+    },
+    {
+        "model": "storages.Section",
+        "fields": {
+            "id": "74040445-b2d3-4bc0-9472-b259fbba7384",
+            "name": "Секция 717643094",
+            "storage": "e8e06de2-f8e2-4fd1-b369-90dd81fd1d56"
+        }
+    },
+    {
+        "model": "storages.Section",
+        "fields": {
+            "id": "e1b87b8d-740a-4da1-9275-00a26797b149",
+            "name": "Секция 775043248",
+            "storage": "0e23d253-a92e-4a6f-99a4-53acac3b9887"
+        }
+    },
+    {
+        "model": "storages.Section",
+        "fields": {
+            "id": "a95e8f07-8c50-46a7-b70f-0efaba2828f0",
+            "name": "Секция 382401192",
+            "storage": "121e2447-5523-4f03-aa46-732a0e4decee"
+        }
+    },
+    {
+        "model": "storages.Section",
+        "fields": {
+            "id": "f45a182a-480f-4123-bd21-d14a4d7a059b",
+            "name": "Секция 057945267",
+            "storage": "0e23d253-a92e-4a6f-99a4-53acac3b9887"
+        }
+    },
+    {
+        "model": "storages.Section",
+        "fields": {
+            "id": "3f5822d0-3e24-4db4-a05a-751517176207",
+            "name": "Секция 610901776",
+            "storage": "3c3c8bdd-6a0a-4004-8ad3-d1eb198783c2"
+        }
+    },
+    {
+        "model": "storages.Section",
+        "fields": {
+            "id": "10ec7f52-72c7-4d45-bd28-04e0ba6e0fc3",
+            "name": "Секция 172045863",
+            "storage": "3c3c8bdd-6a0a-4004-8ad3-d1eb198783c2"
+        }
+    }
+]

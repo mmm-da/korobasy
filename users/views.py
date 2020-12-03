@@ -1,10 +1,10 @@
 from django.contrib.auth.models import User
 from users.serializers import UserSerializer
 from rest_framework.viewsets import ReadOnlyModelViewSet
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from users.permissions import UserPermission
 
 class UserViewset(ReadOnlyModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
-    permission_classes = (IsAuthenticatedOrReadOnly,)
+    permission_classes = (UserPermission, )

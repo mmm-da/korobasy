@@ -1,18 +1,709 @@
 [
-  {
-    "model": "things.thing",
-    "fields": {
-      "id": "89f4e9d3-d225-4eba-ac7a-6568f636ad8e",
-      "name": "Штука",
-      "description": "Хорошая или не хорошая штука"
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "c2747683-d86e-45c2-ba18-d9a7dec971a1",
+            "name": "Господь добиться.",
+            "description": "Расширенное и социальное групповое программное обеспечение"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "a85e4ccc-d42f-4cdb-a346-be5de2fcdd2e",
+            "name": "Господь интеллектуальный.",
+            "description": "Интуитивный и пошаговый прогноз"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "78885b9a-4645-4e46-8de7-1cb6afbc04ef",
+            "name": "Неправда головной.",
+            "description": "Ориентированный и последовательный ресурс"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "3de13ee2-753c-4dac-b8b7-954363b2c98b",
+            "name": "Сутки а.",
+            "description": "Многоканальная и вторичная база данных"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "c01db9c6-77af-4a76-ba1a-b13225efa269",
+            "name": "Угроза степь.",
+            "description": "Автономный и интерактивный набор инструкций"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "006f58ef-468d-427e-96e6-d4f2d07dfd31",
+            "name": "Предоставить угроза.",
+            "description": "Оперативный и бескомпромиссный модератор"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "bc36af37-7fb2-4541-850a-e4a7cf1a3167",
+            "name": "Ложиться спалить.",
+            "description": "Стратегический и переходный подход"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "8ccf950b-6d95-4c85-b798-f45d36f7d886",
+            "name": "Пропаганда подробность.",
+            "description": "Горизонтальный и действенный вызов"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "b1dc731d-7770-484f-a437-7db82293a68b",
+            "name": "Кидать проход.",
+            "description": "Удобный и высокоуровневый графический интерфейс пользователя"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "973d4812-a041-4121-8e56-cc9bfa87c477",
+            "name": "Пасть танцевать.",
+            "description": "Самодостаточное и наглядное хранилище данных"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "44ff98df-c603-429c-a234-c8b4fa83797b",
+            "name": "Бак рот.",
+            "description": "Переработанная и отказостойкая служба поддержки"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "0711547d-66c9-426e-9974-920808ca7f51",
+            "name": "Лиловый решение.",
+            "description": "Межгрупповой и мобильный вызов"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "6e26a505-ced9-4b2b-b3bf-b5ffe1b25cce",
+            "name": "Рот пропасть.",
+            "description": "Реконструируемая и максимальная проекция"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "488a3487-bc9d-4ecd-8542-33d021ede079",
+            "name": "Блин песня.",
+            "description": "Управляемая и однородная конгломерация"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "cc644d87-777e-487e-a8bd-6853f55da688",
+            "name": "Металл намерение.",
+            "description": "Сосредоточенная и гибридная фокус-группа"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "63c2853a-e0ba-489c-bc5f-5516dd0ef7a9",
+            "name": "Что спичка.",
+            "description": "Фундаментальный и потенциальный инструментарий"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "6f447ebf-7af6-4597-93d2-ff9e512eaf98",
+            "name": "Вытаскивать разнообразный.",
+            "description": "Уменьшенное и широкое отношение"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "8e9248e5-4bba-425c-8edb-ef0654190c36",
+            "name": "Коллектив реклама.",
+            "description": "Децентрализованная и прибыльная сеть Интранет"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "6db5ac14-8f1d-4960-882c-81cecb689531",
+            "name": "Нервно достоинство.",
+            "description": "Переработанная и гибкая суперструктура"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "d144e168-0a3e-4d37-8a95-5bacfcccea90",
+            "name": "Мягкий мрачно.",
+            "description": "Распределённая и оптимальная производительность"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "0a10a42f-f34c-4702-8be2-8814d4f20697",
+            "name": "Плясать место.",
+            "description": "Многогранный и раздвоенный инфопосредник"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "371ccbec-a3d4-4676-b000-91f917479c67",
+            "name": "Командующий господь.",
+            "description": "Реализованная и глобальная проекция"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "808edb5a-8c6c-419d-85a0-bda3d2863ef7",
+            "name": "Гулять висеть.",
+            "description": "Распределённая и третичная стандартизация"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "4116c7d4-5b29-452b-a0d3-7dd7aaf33140",
+            "name": "Художественный роскошный.",
+            "description": "Сокращенная и приоритетная парадигма"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "ea111f43-b2cd-47b3-98d0-f772bebb1987",
+            "name": "Порода народ.",
+            "description": "Опциональная и ультрасовременная способность"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "c3b016d8-6936-4970-b25b-39c7563506ad",
+            "name": "Некоторый подробность.",
+            "description": "Амортизированный и контекстуальный адаптер"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "78af2297-5b0e-4e15-a167-5fd10881f479",
+            "name": "Слать факультет.",
+            "description": "Эксклюзивное и методичное взаимодействие"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "52e8278b-3b57-4e71-8624-f3ab00145f7c",
+            "name": "Построить актриса.",
+            "description": "Удобное и гибкое шифрование"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "aa9cb996-ed15-42dc-871b-44c2cd5212ce",
+            "name": "Приятель командир.",
+            "description": "Автоматизированная и аналитическая защищенная линия"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "aa27a2f7-2d55-40fb-b8ba-b0c8de03d7e6",
+            "name": "Июнь один.",
+            "description": "Программируемая и действенная служба поддержки"
+        }
+    },
+    {
+        "model": "things.Thing",
+        "fields": {
+            "id": "bf5ea0c6-d5de-4a11-8a9a-f7287cc8c97e",
+            "name": "Угодный выбирать.",
+            "description": "Реализованный и двунаправленный успех"
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "bc718f25-8d7e-4d8d-a4bd-e9981a9321ff",
+            "section": "74040445-b2d3-4bc0-9472-b259fbba7384",
+            "type": "78885b9a-4645-4e46-8de7-1cb6afbc04ef",
+            "count": 94
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "2193ea17-3b6d-4fdd-91b8-f8b5528b2df1",
+            "section": "10ec7f52-72c7-4d45-bd28-04e0ba6e0fc3",
+            "type": "b1dc731d-7770-484f-a437-7db82293a68b",
+            "count": 73
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "1097f75d-a74d-4a0c-80ed-77111d6a44f4",
+            "section": "9486b7f5-0767-4b0b-a215-6fae36c30303",
+            "type": "006f58ef-468d-427e-96e6-d4f2d07dfd31",
+            "count": 37
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "878ec5a4-0325-4101-9718-83aa904aaa8e",
+            "section": "c90eea77-20e0-4582-bff7-4c749212ab52",
+            "type": "006f58ef-468d-427e-96e6-d4f2d07dfd31",
+            "count": 63
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "a14f85fa-4435-49b3-9ecd-fa53e3117df2",
+            "section": "9486b7f5-0767-4b0b-a215-6fae36c30303",
+            "type": "3de13ee2-753c-4dac-b8b7-954363b2c98b",
+            "count": 10
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "8e203ae2-cde6-4d35-a4fd-37529203f631",
+            "section": "aaf68f9d-0363-4b5c-bece-9606f3bd021d",
+            "type": "78af2297-5b0e-4e15-a167-5fd10881f479",
+            "count": 97
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "aa97f5be-d2b8-44fd-8af8-779b24fd6a9f",
+            "section": "08c7d8e5-287c-49c4-a27d-2523734e52f8",
+            "type": "aa27a2f7-2d55-40fb-b8ba-b0c8de03d7e6",
+            "count": 75
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "d84fa142-5b2a-4697-bb49-e4bfdb07e4a0",
+            "section": "9486b7f5-0767-4b0b-a215-6fae36c30303",
+            "type": "371ccbec-a3d4-4676-b000-91f917479c67",
+            "count": 76
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "75a813c3-dd78-4d50-b1c7-454e2109a303",
+            "section": "b2989498-32d3-4d07-9dca-2e62a48ca550",
+            "type": "371ccbec-a3d4-4676-b000-91f917479c67",
+            "count": 52
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "64c04d7b-dedf-487f-bcb1-d444cced0162",
+            "section": "1b32e14c-4606-4eb3-9bab-f46b17ddf248",
+            "type": "b1dc731d-7770-484f-a437-7db82293a68b",
+            "count": 21
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "8a35abbe-7ae3-4f7e-ac2d-98d7a1b1d570",
+            "section": "5808eee2-ad8c-415d-8fbd-ee13d1cae76b",
+            "type": "63c2853a-e0ba-489c-bc5f-5516dd0ef7a9",
+            "count": 37
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "9e64f6e6-adbe-434a-b057-94c0609be956",
+            "section": "74040445-b2d3-4bc0-9472-b259fbba7384",
+            "type": "a85e4ccc-d42f-4cdb-a346-be5de2fcdd2e",
+            "count": 19
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "78d49526-ed2d-4dc6-aa6f-c6721b61103d",
+            "section": "3f09eee1-3dbe-4721-baa2-679728b8f7fb",
+            "type": "371ccbec-a3d4-4676-b000-91f917479c67",
+            "count": 84
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "225d52e7-61f3-4a39-93cc-077e131ce054",
+            "section": "aaf68f9d-0363-4b5c-bece-9606f3bd021d",
+            "type": "a85e4ccc-d42f-4cdb-a346-be5de2fcdd2e",
+            "count": 91
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "f5f7ceb7-fb2d-4660-873d-171ab28d727e",
+            "section": "1b32e14c-4606-4eb3-9bab-f46b17ddf248",
+            "type": "3de13ee2-753c-4dac-b8b7-954363b2c98b",
+            "count": 48
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "5bb0b5fe-1fb3-4361-b895-583c644eb0c2",
+            "section": "3f09eee1-3dbe-4721-baa2-679728b8f7fb",
+            "type": "a85e4ccc-d42f-4cdb-a346-be5de2fcdd2e",
+            "count": 86
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "86cbf96b-b2e7-4e8d-a4a4-bcb34bfe2e36",
+            "section": "f45a182a-480f-4123-bd21-d14a4d7a059b",
+            "type": "3de13ee2-753c-4dac-b8b7-954363b2c98b",
+            "count": 36
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "91afbb4b-c5f6-428a-951d-8eb69becf9ed",
+            "section": "aaf68f9d-0363-4b5c-bece-9606f3bd021d",
+            "type": "4116c7d4-5b29-452b-a0d3-7dd7aaf33140",
+            "count": 35
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "9cef9ea9-6085-4b98-afc4-67fa6b01057b",
+            "section": "10ec7f52-72c7-4d45-bd28-04e0ba6e0fc3",
+            "type": "c01db9c6-77af-4a76-ba1a-b13225efa269",
+            "count": 55
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "c8241a23-ffda-4ab3-9396-3ea4fb8ed68c",
+            "section": "5808eee2-ad8c-415d-8fbd-ee13d1cae76b",
+            "type": "a85e4ccc-d42f-4cdb-a346-be5de2fcdd2e",
+            "count": 52
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "f3f00eed-62c8-4121-9d58-47a913d53ff0",
+            "section": "1b32e14c-4606-4eb3-9bab-f46b17ddf248",
+            "type": "bc36af37-7fb2-4541-850a-e4a7cf1a3167",
+            "count": 68
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "8ad49f48-d782-413e-a7c5-47b5274b312e",
+            "section": "74040445-b2d3-4bc0-9472-b259fbba7384",
+            "type": "aa9cb996-ed15-42dc-871b-44c2cd5212ce",
+            "count": 89
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "8ce95251-56ab-412d-870a-ce6c2f51b853",
+            "section": "c90eea77-20e0-4582-bff7-4c749212ab52",
+            "type": "371ccbec-a3d4-4676-b000-91f917479c67",
+            "count": 85
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "d7611ca9-3e0f-46d2-a14e-106c27d4c0bb",
+            "section": "3f09eee1-3dbe-4721-baa2-679728b8f7fb",
+            "type": "973d4812-a041-4121-8e56-cc9bfa87c477",
+            "count": 96
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "7d591f20-0c8a-430c-b15e-80c08c3a63a5",
+            "section": "5808eee2-ad8c-415d-8fbd-ee13d1cae76b",
+            "type": "52e8278b-3b57-4e71-8624-f3ab00145f7c",
+            "count": 4
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "8eb2bcc7-3f38-436f-8b36-af4374ca7c3b",
+            "section": "8277cadd-1a5a-4fba-88f2-c3dbb819a43c",
+            "type": "b1dc731d-7770-484f-a437-7db82293a68b",
+            "count": 71
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "0cf4749f-d185-46b4-a394-f4139ae4d1a4",
+            "section": "f45a182a-480f-4123-bd21-d14a4d7a059b",
+            "type": "d144e168-0a3e-4d37-8a95-5bacfcccea90",
+            "count": 90
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "c4757b38-778c-48cf-8ea6-5911ed60e5d2",
+            "section": "3f6ab15f-fd46-47e1-b082-39b28973bb24",
+            "type": "c2747683-d86e-45c2-ba18-d9a7dec971a1",
+            "count": 93
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "9052c3e5-8b58-4a11-9777-4dc1ee91272a",
+            "section": "1b32e14c-4606-4eb3-9bab-f46b17ddf248",
+            "type": "c01db9c6-77af-4a76-ba1a-b13225efa269",
+            "count": 13
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "021932b6-0f8f-40b0-8f87-11105e9e1957",
+            "section": "f45a182a-480f-4123-bd21-d14a4d7a059b",
+            "type": "3de13ee2-753c-4dac-b8b7-954363b2c98b",
+            "count": 80
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "8f9d454a-c799-4705-bc2d-31b72e66c0f0",
+            "section": "74040445-b2d3-4bc0-9472-b259fbba7384",
+            "type": "6f447ebf-7af6-4597-93d2-ff9e512eaf98",
+            "count": 33
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "6700b864-6b2a-4573-9d6a-ae9cfc5387c2",
+            "section": "3f6ab15f-fd46-47e1-b082-39b28973bb24",
+            "type": "8e9248e5-4bba-425c-8edb-ef0654190c36",
+            "count": 64
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "cbbc2f57-4fb0-44cb-bea3-b7721fb49b48",
+            "section": "3f5822d0-3e24-4db4-a05a-751517176207",
+            "type": "6f447ebf-7af6-4597-93d2-ff9e512eaf98",
+            "count": 88
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "7a52893f-b34b-4a2c-8681-927eb9bcc38d",
+            "section": "2d823daa-373f-401b-bd97-aa62ccea5218",
+            "type": "006f58ef-468d-427e-96e6-d4f2d07dfd31",
+            "count": 44
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "44515045-7edb-4eca-98da-e3b948342a65",
+            "section": "c90eea77-20e0-4582-bff7-4c749212ab52",
+            "type": "c2747683-d86e-45c2-ba18-d9a7dec971a1",
+            "count": 16
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "50f2460d-4aba-44bc-85f1-bf497ed2ea97",
+            "section": "2d823daa-373f-401b-bd97-aa62ccea5218",
+            "type": "bf5ea0c6-d5de-4a11-8a9a-f7287cc8c97e",
+            "count": 91
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "224aeae2-575e-4963-b2a1-578145ae7ca8",
+            "section": "8277cadd-1a5a-4fba-88f2-c3dbb819a43c",
+            "type": "aa9cb996-ed15-42dc-871b-44c2cd5212ce",
+            "count": 83
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "40b0b418-b929-4b3b-b816-5f0ee359ccc1",
+            "section": "aaf68f9d-0363-4b5c-bece-9606f3bd021d",
+            "type": "63c2853a-e0ba-489c-bc5f-5516dd0ef7a9",
+            "count": 8
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "a97fffaa-3600-4699-8a05-e758c590ca3e",
+            "section": "603680f5-f015-4bfe-901b-06f7ea14c5f0",
+            "type": "0711547d-66c9-426e-9974-920808ca7f51",
+            "count": 66
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "4166a535-6d95-4ede-96a5-c505b20223e2",
+            "section": "e1b87b8d-740a-4da1-9275-00a26797b149",
+            "type": "ea111f43-b2cd-47b3-98d0-f772bebb1987",
+            "count": 50
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "08e7f451-d108-4ece-89f6-cc408a0ddc67",
+            "section": "e2b365ef-8f85-4e39-b791-502750238de6",
+            "type": "371ccbec-a3d4-4676-b000-91f917479c67",
+            "count": 49
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "f5a7fba1-ee68-4085-a939-83da297f7999",
+            "section": "73f324e3-6353-465f-978a-9b90b42beecb",
+            "type": "44ff98df-c603-429c-a234-c8b4fa83797b",
+            "count": 45
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "8c89e1c2-8e64-42fd-bcdc-0218db6aa61b",
+            "section": "a95e8f07-8c50-46a7-b70f-0efaba2828f0",
+            "type": "0a10a42f-f34c-4702-8be2-8814d4f20697",
+            "count": 22
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "5100909d-4083-4f7b-ad69-af75a20c97be",
+            "section": "8277cadd-1a5a-4fba-88f2-c3dbb819a43c",
+            "type": "bc36af37-7fb2-4541-850a-e4a7cf1a3167",
+            "count": 100
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "331829d2-8ad4-48f6-b9d3-030107da5fb9",
+            "section": "603680f5-f015-4bfe-901b-06f7ea14c5f0",
+            "type": "44ff98df-c603-429c-a234-c8b4fa83797b",
+            "count": 37
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "4123d720-0078-4a39-959f-bb12d52d868a",
+            "section": "e1b87b8d-740a-4da1-9275-00a26797b149",
+            "type": "b1dc731d-7770-484f-a437-7db82293a68b",
+            "count": 61
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "cf8f0d28-0338-41ae-8094-3cf4e3cee84b",
+            "section": "f45a182a-480f-4123-bd21-d14a4d7a059b",
+            "type": "8e9248e5-4bba-425c-8edb-ef0654190c36",
+            "count": 6
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "48b74dab-b7d3-4841-9008-463b27a44bd4",
+            "section": "f45a182a-480f-4123-bd21-d14a4d7a059b",
+            "type": "63c2853a-e0ba-489c-bc5f-5516dd0ef7a9",
+            "count": 8
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "ccc28e3d-0ef2-4f34-8d55-171f99ff5333",
+            "section": "2d823daa-373f-401b-bd97-aa62ccea5218",
+            "type": "6e26a505-ced9-4b2b-b3bf-b5ffe1b25cce",
+            "count": 32
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "d56d1cc2-2b3a-4c52-93ff-67fa1fac085a",
+            "section": "e2b365ef-8f85-4e39-b791-502750238de6",
+            "type": "bc36af37-7fb2-4541-850a-e4a7cf1a3167",
+            "count": 53
+        }
+    },
+    {
+        "model": "things.ThingInstance",
+        "fields": {
+            "id": "4be02834-7d0a-4830-8d06-4c55642c606a",
+            "section": "3f09eee1-3dbe-4721-baa2-679728b8f7fb",
+            "type": "8ccf950b-6d95-4c85-b798-f45d36f7d886",
+            "count": 51
+        }
     }
-  },
-  {
-    "model": "things.thing",
-    "fields": {
-      "id": "05ee523d-950e-49f9-9a9f-410fe852eefb",
-      "name": "Электрическая штука",
-      "description": "Штука от Зевса."
-    }
-  }
 ]

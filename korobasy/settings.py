@@ -8,40 +8,34 @@ SECRET_KEY = environ['SECRET_KEY']
 DEBUG = int(environ.get("DEBUG", default=0))
 ALLOWED_HOSTS = environ["DJANGO_ALLOWED_HOSTS"].split(" ")
 
+CORS_ORIGIN_ALLOW_ALL=True
+
 INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.staticfiles',
-    'users',
-    'storages',
-    'things',
+    
     'rest_framework',
     'corsheaders',
     'taggit',
     'taggit_serializer',
-    'django_extensions'
+    'djoser',
+
+    'users',
+    'storages',
+    'things'
+
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware'
 ]
-
-REST_FRAMEWORK = {
-    'DEFAULT_RENDERER_CLASSES': [
-        'rest_framework.renderers.JSONRenderer',
-    ],
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
-    ),
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ),
-}
 
 ROOT_URLCONF = 'korobasy.urls'
 
@@ -67,3 +61,20 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
+
+SIMPLE_JWT = {
+   'AUTH_HEADER_TYPES': ('Bearer', 'JWT'),
+}
+
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:9000"
+]
