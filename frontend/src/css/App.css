@@ -38,7 +38,7 @@ input{
 }
 
 button{
-    padding: 8px 24px;
+    padding: 10px 24px;
     margin: 4px 16px;
 
     color: #3B434E;
@@ -87,4 +87,18 @@ tr,td{
 
 .container{
     min-height: calc(100vh - 80px);
+}
+
+.form-input{
+    margin-bottom: 24px;
+}
+
+.form-input p{
+    font-weight: 500;
+}
+
+.form-input .form-error{
+    color: #9b0000;
+    font-size: 0.8em;
+    font-weight: 700;
 }
