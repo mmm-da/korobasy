@@ -2,7 +2,7 @@ from rest_framework import serializers
 from storages.models import Storage
 from django.contrib.auth.models import User
 
-class UserSerializer(serializers.ModelSerializer):
+class KorobasyUserSerializer(serializers.ModelSerializer):
     storages = serializers.PrimaryKeyRelatedField(many=True, queryset=Storage.objects.all())
     class Meta:
         model = User

@@ -19,4 +19,4 @@ class ThingCategorySerializer(serializers.ModelSerializer):
     things = serializers.PrimaryKeyRelatedField(many=True,queryset=Thing.objects.all())
     class Meta:
         model = ThingCategory
-        fields = ('id', 'name','label','things')
+        fields = ('id', 'name','icon_label','things')
