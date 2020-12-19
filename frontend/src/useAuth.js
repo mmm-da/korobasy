@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, createContext } from "react";
+import React, { useState, useContext, createContext } from "react";
 import baseUrl from './constants'
 import axios from 'axios'
 
@@ -14,39 +14,14 @@ export const useAuth = () => {
 };
 
 function useProvideAuth() {
-    const [refreshToken,setRefreshToken] = useState(
-        window.localStorage.getItem('refrashToken')
-        );
-    const [accessToken,setAccessToken] = useState(
-            window.localStorage.getItem('accessToken')
-        );
-            
-    const [userId, setUserId] = useState(null);
+    const [user,setUser] = useState(null)
 
-    const getUserId = async () =>{
-        const token = await getAccessToken().toString()
-        console.log(token)
-        try{
-            const response = await axios({
-                method: 'get',
-                url: baseUrl + '/auth/users/me',
-                headers: {
-                    Authorization: `Bearer ${token}`
-                }
-            });
-            return response.data.id;
-        }
-        catch (e){
-            return null
-        }
-    }
-    
+
     const getAccessToken = async () => {
-        var accessToken =  window.localStorage.getItem('accessToken');
-        if (await verifyToken(accessToken)){
-            return accessToken;
-        }else{
-            const refreshToken = await getRefreshToken();
+        const accessToken =  window.localStorage.getItem('accessToken');
+        if (verifyToken(accessToken)) return accessToken;
+        else{
+            const refreshToken = getRefreshToken();
             try{
                 const response = await axios({
                     method: 'post',
@@ -54,49 +29,41 @@ function useProvideAuth() {
                     data: {
                         refresh: refreshToken.toString()
                     }
-                });
-                window.localStorage.setItem('accessToken',response.data.access);
-                setAccessToken(response.data.access);
-                return response.data.access;
+                })
+                const accessToken = await response.data.access;
+                window.localStorage.setItem('accessToken',accessToken);
+                return accessToken;
             }
             catch (e){
                 window.localStorage.removeItem('accessToken');
-                setAccessToken(null);
-                setUserId(null);
-                throw Error('Reset token is invalid. Need to login again')
+                setLoginStatus('loginNone');
+                return null
             }
         }
     }
-    
-    const getRefreshToken = async () => {
-        var refreshToken =  window.localStorage.getItem('refreshToken');
-        if (await verifyToken(refreshToken)){
+
+    const getRefreshToken = () => {
+        let refreshToken =  window.localStorage.getItem('refreshToken');
+        if (verifyToken(refreshToken)){
             return refreshToken;
         }else{
             window.localStorage.removeItem('refreshToken');
-            throw Error('Reset token is invalid. Need to login again')
+            return null
         }
     }
 
-    const verifyToken = async (token) =>{
-        if (token === '' || token === null) return false;
+    const verifyToken = (token) =>{
         try{
-            const response = await axios({
-                method: 'post',
-                url: baseUrl + '/auth/jwt/verify',
-                data: {
-                    token: token,
-                }
-            });
-            return true;
-        }
-        catch (e){
-            return false;
+            const jwt_token = JSON.parse(atob(token.split('.')[1]))
+            return ((Date.now() / 1000 | 0) < jwt_token.exp)
+        }catch(e){
+            return false
         }
     }
 
     const login = async (username, password) => {
         try{
+            setLoginStatus('loginWait');
             const response = await axios({
                 method: 'post',
                 url: baseUrl + '/auth/jwt/create',
@@ -104,44 +71,84 @@ function useProvideAuth() {
                     username: username.toString(),
                     password: password.toString()
                 }
-            });
-            const data = response.data;
+            })
+            const data = await response.data;
             window.localStorage.setItem('accessToken',data.access);
             window.localStorage.setItem('refreshToken',data.refresh);
-            setAccessToken(data.access);
-            setUserId(await getUserId())
+            setLoginStatus('loginSuccess');
+            const result = await getUser();
+            setUser(result);
         }
         catch (e){
-            setUserId(null)
+            console.log('loginError');
+            setLoginStatus('loginError');
+
         }
     };
 
-    const signup = (username, password) => {
-
-    };
-
-    const signout = () => {
+    const logout = () => {
         window.localStorage.removeItem('accessToken');
         window.localStorage.removeItem('refreshToken');
-        setUserId(null);
-        setAccessToken(null);
+        setLoginStatus('loginNone');
     };
 
-    const sendPasswordResetEmail = email => {
+    const [loginStatus,setLoginStatus] = useState(
+        verifyToken(getRefreshToken()) ? 'loginSuccess' : 'loginNone'
+    )
 
+
+    const getUserInfo = async (userId) => {
+        const accessToken = await getAccessToken();
+        try{
+            const response = await axios({
+                method: 'get',
+                url: baseUrl + `/api/users/${userId.toString()}`,
+                headers: {
+                    Authorization: `Bearer ${accessToken}`
+                }
+            });
+            return response.data;
+        }
+        catch (e){
+            return {}
+        }
+    }
+
+    const getUser = async () => {
+        let accessToken = await getAccessToken();
+        try{
+            const response = await axios({
+                method: 'get',
+                url: baseUrl + `/auth/users/me`,
+                headers: {
+                    Authorization: `Bearer ${accessToken}`
+                }
+            })
+            const userId = await response.data.id;
+            const userInfo = await getUserInfo(userId);
+            console.log(userInfo)
+            return userInfo
+        }
+        catch (e){
+            return null
+        };
     };
 
-    const confirmPasswordReset = (code, password) => {
-
+    if (loginStatus === 'loginSuccess' && user == null){
+        getUser().then(
+            (result) => {
+                console.log(result)
+                setUser(result)
+            }
+        )
     };
 
     return {
-        userId,
+        loginStatus,
         getAccessToken,
+        setLoginStatus,
+        user,
         login,
-        signup,
-        signout,
-        sendPasswordResetEmail,
-        confirmPasswordReset
+        logout
     };
 }

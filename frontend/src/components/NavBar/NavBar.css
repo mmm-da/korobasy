@@ -16,12 +16,26 @@
     padding-right: 16px;
 }
 
+
 .navbar-logo{
     color: #EEA35D;
 
-    font-size: 3em;
+    font-size: 56px;
     font-family: 'Amatic SC', cursive;
+    margin-right: 16px;
 }
+
+@media screen and (max-width: 900px) {
+    .navbar-logo{
+        display: none;
+    }
+
+    .navbar{
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
 
 .navbar-logo:hover{
     color: #ffc98d;

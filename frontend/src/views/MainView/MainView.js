@@ -1,23 +1,10 @@
 import React from "react";
-import SearchBar from "../../components/SearchBar/SearchBar";
-
+import AnonMainView from "./AnonMainView";
+import AuthMainView from "./AuthMainView";
 import "../css/View.css"
-import ThingsList from "../../components/ThingsList/ThingsList";
+import {useAuth} from "../../useAuth";
 
 export default function MainView(props){
-    if (props.isLogin){
-        return(
-            <div className="view">
-                <h1 className="title">Не знаешь где лежит штука, можешь посмотреть тут</h1>
-                <SearchBar/>
-                <ThingsList/>
-            </div>
-        )
-    }else{
-        return (
-            <div className="view">
-                <h1 className="title">123</h1>
-            </div>
-        )
-    }
+    const auth = useAuth();
+    return auth.loginStatus === 'loginSuccess' ?  <AuthMainView/> : <AnonMainView/>
 }
