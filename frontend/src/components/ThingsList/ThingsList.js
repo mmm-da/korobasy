@@ -1,16 +1,14 @@
-import React, {useEffect,useState} from "react";
-import ThingsListHeader from "../ThingsListHeader/ThingsListHeader";
-import ThingsListElement from "../ThingListElement/ThingsListElement";
+import React, {useEffect} from "react";
 import "./ThingsList.css"
 
-export default function ThingsList(props){
+export default function ThingsList(props) {
     useEffect(
         () => {
 
-        },[]
+        }, []
     );
 
-    return(
+    return (
         <div className="things-list">
             {}
         </div>

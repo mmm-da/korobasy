@@ -10,7 +10,8 @@
     "react-dom": "^16.14.0",
     "react-router-dom": "^5.2.0",
     "axios": "0.21.0",
-    "react-hook-form": "6.12.2"
+    "react-hook-form": "6.12.2",
+    "reactjs-popup": "2.0.4"
   },
   "scripts": {
     "start": "react-scripts start",

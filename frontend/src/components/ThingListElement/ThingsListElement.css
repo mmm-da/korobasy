@@ -1,4 +1,4 @@
-.things-list-element{
+.things-list-element {
     display: grid;
     grid-template-columns: 3em auto 30%;
     grid-template-rows: 3em 3em;
@@ -9,21 +9,22 @@
     "icon place reserve";
 
     padding: 1em;
-    list-style:none;
+    list-style: none;
     border-radius: 7px;
     transition-duration: 0.1s;
-}
-
-a{
-    text-decoration: none;
-}
-
-.things-list-element:hover{
-    color: #3B434E;
     background-color: #eeebe3;
 }
 
-.things-list-element-icon{
+a {
+    text-decoration: none;
+}
+
+.things-list-element:hover {
+    color: #3B434E;
+    background-color: #e5e2d7;
+}
+
+.things-list-element-icon {
     height: 3em;
     width: 3em;
     margin: 12px;
@@ -31,26 +32,26 @@ a{
     justify-self: center;
 }
 
-.things-list-element-title{
+.things-list-element-title {
     grid-area: title;
     font-size: 1.5em;
     justify-self: self-start;
 }
 
-.things-list-element-place{
+.things-list-element-place {
     grid-area: place;
     font-size: 1em;
     justify-self: self-start;
 }
 
-.things-list-element-reserve{
+.things-list-element-reserve {
     grid-area: reserve;
     font-size: 0.8em;
     align-self: center;
     justify-self: self-end;
 }
 
-.things-list-element-count{
+.things-list-element-count {
     grid-area: count;
     color: #EEA35D;
     font-size: 2em;

@@ -4,13 +4,13 @@ import {useForm} from "react-hook-form";
 import {useAuth} from "../../useAuth";
 import {Spinner} from "../Spinner/Spinner";
 
-export default function LoginForm(){
-    const { register, errors, handleSubmit } = useForm();
+export default function LoginForm() {
+    const {register, errors, handleSubmit} = useForm();
     const auth = useAuth();
 
     const onSubmit = data => {
         auth.setLoginStatus('loginNone');
-        auth.login(data.username,data.password);
+        auth.login(data.username, data.password);
     }
 
     const formBody = <form onSubmit={handleSubmit(onSubmit)}>
@@ -38,25 +38,25 @@ export default function LoginForm(){
         <button type="submit">Войти</button>
     </form>;
 
-    switch(auth.loginStatus){
+    switch (auth.loginStatus) {
         case('loginWait'): {
-            return(
+            return (
                 <Spinner spinnerSize='medium'/>
             );
         }
-        case('loginError'):{
-            return(
+        case('loginError'): {
+            return (
                 <>
                     <p className='form-error'>Неверный логин или пароль</p>
                     {formBody}
                 </>
             );
         }
-        case('loginNone'):{
+        case('loginNone'): {
             return <>{formBody}</>;
         }
-        case('loginSuccess'):{
-            return <Redirect to='/' />
+        case('loginSuccess'): {
+            return <Redirect to='/'/>
         }
     }
 }

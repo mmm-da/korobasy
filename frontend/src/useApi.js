@@ -1,41 +1,40 @@
-import React, { useState, useEffect, useContext, createContext } from "react";
+import React, {createContext, useContext} from "react";
 import baseUrl from './constants'
-import { useAuth } from "./useAuth";
+import {useAuth} from "./useAuth";
 import axios from 'axios'
 
 const apiContext = createContext();
 
-export function ProvideApi({ children }) {
-  const auth = useProvideApi();
-  return <apiContext.Provider value={auth}>{children}</apiContext.Provider>;
+export function ProvideApi({children}) {
+    const auth = useProvideApi();
+    return <apiContext.Provider value={auth}>{children}</apiContext.Provider>;
 }
 
 export const useApi = () => {
-  return useContext(apiContext);
+    return useContext(apiContext);
 };
 
-function useProvideApi(){
+function useProvideApi() {
     const auth = useAuth();
 
-     const getThing = async (uuid) =>{
-         try{
-             const response = await axios({
-                 method: 'get',
-                 url: baseUrl + `/api/things/${uuid.toString()}`,
-                 headers: {
-                     Authorization: `Bearer ${auth.accessToken.toString()}`
-                 }
-             });
-             return response.data;
-         }
-         catch (e){
-             return null
-         }
-     }
+    const getThing = async (uuid) => {
+        try {
+            const response = await axios({
+                method: 'get',
+                url: baseUrl + `/api/things/${uuid.toString()}`,
+                headers: {
+                    Authorization: `Bearer ${auth.accessToken.toString()}`
+                }
+            });
+            return response.data;
+        } catch (e) {
+            return null
+        }
+    }
 
-    const getStorage = async (uuid) =>{
+    const getStorage = async (uuid) => {
         let accessToken = await auth.getAccessToken();
-        try{
+        try {
             const response = await axios({
                 method: 'get',
                 url: baseUrl + `/api/storages/${uuid.toString()}`,
@@ -43,16 +42,42 @@ function useProvideApi(){
                     Authorization: `Bearer ${accessToken}`
                 }
             });
-            console.log(response.data);
-            return response.data;
-        }
-        catch (e){
+            const data = await response.data;
+            return data;
+        } catch (e) {
             return null
         }
     }
 
-    const getSection = async (uuid) =>{
-        try{
+    const postStorage = async (name) => {
+        let accessToken = await auth.getAccessToken();
+        const username = auth.user.username
+        const data = {
+            name: name,
+            owner: username,
+            sections: [],
+            tags: []
+        }
+        console.log(data)
+        try {
+            const response = await axios({
+                method: 'post',
+                url: baseUrl + `/api/storages/`,
+                headers: {
+                    Authorization: `Bearer ${accessToken}`
+                },
+                data: {
+                   name: name,
+                   owner: username,
+                   sections: [],
+                   tags: []
+                }
+            });
+        }catch (e){}
+    }
+
+    const getSection = async (uuid) => {
+        try {
             const response = await axios({
                 method: 'get',
                 url: baseUrl + `/api/sections/${uuid.toString()}`,
@@ -61,14 +86,13 @@ function useProvideApi(){
                 }
             });
             return response.data;
-        }
-        catch (e){
+        } catch (e) {
             return null
         }
     }
 
-    const getInstance = async (uuid) =>{
-        try{
+    const getInstance = async (uuid) => {
+        try {
             const response = await axios({
                 method: 'get',
                 url: baseUrl + `/api/instances/${uuid.toString()}`,
@@ -77,14 +101,13 @@ function useProvideApi(){
                 }
             });
             return response.data;
-        }
-        catch (e){
+        } catch (e) {
             return null
         }
     }
 
-    const getCategory = async (uuid) =>{
-        try{
+    const getCategory = async (uuid) => {
+        try {
             const response = await axios({
                 method: 'get',
                 url: baseUrl + `/api/category/${uuid.toString()}`,
@@ -93,14 +116,14 @@ function useProvideApi(){
                 }
             });
             return response.data;
-        }
-        catch (e){
+        } catch (e) {
             return null
         }
     }
 
 
     return {
-        getStorage
+        getStorage,
+        postStorage
     };
 }

@@ -8,9 +8,9 @@ ReactDOM.render(
     <ProvideAuth>
         <ProvideApi>
             <React.StrictMode>
-              <App/>
+                <App/>
             </React.StrictMode>
         </ProvideApi>
     </ProvideAuth>,
-  document.getElementById('root')
+    document.getElementById('root')
 );

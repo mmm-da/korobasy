@@ -1,27 +1,42 @@
 import React, {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
 import './StorageList.css'
 import {useApi} from "../../useApi";
 import StorageElement from "../StorageElement/StorageElement";
+import {useAuth} from "../../useAuth";
+import {Spinner} from "../Spinner/Spinner";
 
-export default function StorageList(props){
+export default function StorageList(props) {
     const api = useApi();
+    const auth = useAuth();
 
-    const [storage,setStorage] = useState(null);
+    const [components, setComponents] = useState(null);
+    const getStorages = async (uuidList) => {
+        return Promise.all(
+            uuidList.map(
+                uuid => api.getStorage(uuid)
+            )
+        );
+    }
 
     useEffect(
-        ( )=> {
-            api.getStorage("c2e9f25d-9ae5-4693-af3f-2480735ee826").then(
-                (result)=>{
-                    setStorage(result)
-                }
-            )
+        () => {
+            const user = auth.user;
+            if (user != null) {
+                getStorages(user.storages).then(
+                    data => {
+                        setComponents(
+                            data.map(data => <StorageElement key={data.id} storageInfo={data}/>)
+                        )
+                    }
+                )
+            } else {
+                setComponents(<Spinner spinnerSize="medium"/>)
+            }
+        }, [auth.user, api.getStorage])
 
-        }
-        ,[])
-    return(
-        <div>
-            <StorageElement storageInfo={storage}/>
-        </div>
+    return (
+        <ul className="storage-list">
+            {components ? components : <Spinner spinnerSize="medium"/> }
+        </ul>
     )
 }

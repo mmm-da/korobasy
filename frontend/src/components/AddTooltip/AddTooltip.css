@@ -1,0 +1,44 @@
+.popup-content {
+    margin: 8px 0 0 0;
+    background: #F6F5F1;
+    width: 100%;
+    padding: 20px 0px 20px 20px;
+    border-color: #EEA35D;
+    border-radius: 7px;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.popup-arrow {
+    color: rgb(255, 255, 255);
+}
+
+[role='tooltip'].popup-content {
+    width: 360px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+}
+
+.popup-overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+[data-popup='tooltip'].popup-overlay {
+    background: transparent;
+}
+
+.error-border {
+    border-color: #9b0000;
+}
+
+.popup-content input {
+    width: 75%;
+}
+
+.popup-content button {
+    padding: 0px 16px 0px 16px;
+    text-align: justify;
+}
+
+.popup-content form{
+    text-align: center;
+}

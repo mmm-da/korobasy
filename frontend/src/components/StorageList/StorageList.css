@@ -1,0 +1,15 @@
+.storage-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.storage-list a{
+    text-decoration: none;
+}
+
+.storage-list a:hover{
+    color: #3b434e;
+    text-decoration: none;
+}

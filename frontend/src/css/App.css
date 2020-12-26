@@ -1,8 +1,8 @@
-html{
+html {
     font-size: 16px;
 }
 
-body{
+body {
     margin: 0;
     height: 100%;
     font-family: 'Montserrat', sans-serif;
@@ -11,17 +11,16 @@ body{
     background-color: #F6F5F1;
 }
 
-a{
+a {
     color: #3B434E;
-    text-decoration: underline;
     transition-duration: 0.1s;
 }
 
-a:hover{
+a:hover {
     color: #EEA35D;
 }
 
-input{
+input {
     width: calc(300px + 20%);
 
     text-align: center;
@@ -39,7 +38,8 @@ input{
     font-size: 1em;
 }
 
-button{
+button {
+    height: 36px;
     padding: 10px 24px;
     margin: 8px 16px;
 
@@ -57,15 +57,15 @@ button{
     transition-duration: 0.1s;
 }
 
-button:focus{
+button:focus {
     border-style: none;
 }
 
-button:hover{
+button:hover {
     background-color: #ffc98d;
 }
 
-.root{
+.root {
     height: 100%;
     display: flex;
     min-height: 100vh;
@@ -73,38 +73,38 @@ button:hover{
     align-content: space-between;
 }
 
-table{
+table {
     background-color: #eeebe3;
     margin: 0px;
     padding: 16px;
     border-radius: 7px;
-    border-collapse:separate;
+    border-collapse: separate;
     border-spacing: 8px;
 }
 
-tr,td{
+tr, td {
     text-align: justify;
 }
 
-.container{
+.container {
     min-height: calc(100vh - 80px);
 }
 
-.form-input{
+.form-input {
     margin-bottom: 24px;
 }
 
-.form-input p{
+.form-input p {
     font-weight: 500;
 }
 
-.form-input .form-error{
+.form-input .form-error {
     color: #9b0000;
     font-size: 0.8em;
     font-weight: 700;
 }
 
-.form-error{
+.form-error {
     color: #9b0000;
     font-size: 0.8em;
     font-weight: 700;

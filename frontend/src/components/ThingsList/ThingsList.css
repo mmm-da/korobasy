@@ -1,10 +1,10 @@
-.things-list{
+.things-list {
     display: flex;
     flex-direction: column;
     align-content: space-around;
     margin: 16px 2em;
 }
 
-.things-list a{
+.things-list a {
     text-decoration: none;
 }

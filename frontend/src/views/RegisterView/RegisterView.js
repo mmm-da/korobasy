@@ -1,21 +1,21 @@
-import React,{ useRef } from "react";
+import React from "react";
 import {Link} from "react-router-dom";
 
 import "../css/View.css"
 
 
-export default function RegisterView(){
-    return(
+export default function RegisterView() {
+    return (
         <main className="view">
             <h1 className="title">Зарегистрируйся чтобы получить возможность</h1>
-                <p className="hidden-text">наверное, если не будет лень</p>
+            <p className="hidden-text">наверное, если не будет лень</p>
             <h1 className="title">навести порядок в хранилищах своего хлама</h1>
-            
+
             <form onSubmit={e => e.preventDefault()}>
                 <div className="form-input">
                     <p>Имя пользователя</p>
                     <input
-                        name='username' 
+                        name='username'
                     />
                     <p>Пароль</p>
                     <input
@@ -28,7 +28,7 @@ export default function RegisterView(){
                         type="password"
                     />
                 </div>
-                <button type="submit" >
+                <button type="submit">
                     Зарегистрироватся
                 </button>
             </form>
