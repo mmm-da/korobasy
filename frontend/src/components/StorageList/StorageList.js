@@ -32,7 +32,7 @@ export default function StorageList(props) {
             } else {
                 setComponents(<Spinner spinnerSize="medium"/>)
             }
-        }, [auth.user, api.getStorage])
+        }, [auth.user, api.getStorage,api.postStorage,api.deleteStorage])
 
     return (
         <ul className="storage-list">

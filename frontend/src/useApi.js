@@ -18,15 +18,17 @@ function useProvideApi() {
     const auth = useAuth();
 
     const getThing = async (uuid) => {
+        let accessToken = await auth.getAccessToken();
         try {
             const response = await axios({
                 method: 'get',
                 url: baseUrl + `/api/things/${uuid.toString()}`,
                 headers: {
-                    Authorization: `Bearer ${auth.accessToken.toString()}`
+                    Authorization: `Bearer ${accessToken}`
                 }
             });
-            return response.data;
+            const data = await response.data;
+            return data;
         } catch (e) {
             return null
         }
@@ -52,13 +54,6 @@ function useProvideApi() {
     const postStorage = async (name) => {
         let accessToken = await auth.getAccessToken();
         const username = auth.user.username
-        const data = {
-            name: name,
-            owner: username,
-            sections: [],
-            tags: []
-        }
-        console.log(data)
         try {
             const response = await axios({
                 method: 'post',
@@ -76,31 +71,68 @@ function useProvideApi() {
         }catch (e){}
     }
 
+    const patchStorageName = async (uuid,name) => {
+        let accessToken = await auth.getAccessToken();
+        try {
+            const response = await axios({
+                method: 'patch',
+                url: baseUrl + `/api/storages/${uuid}/`,
+                headers: {
+                    Authorization: `Bearer ${accessToken}`
+                },
+                data: {
+                    name: name
+                }
+            });
+        }catch (e){}
+    }
+
+    const deleteStorage = async (uuid) => {
+        let accessToken = await auth.getAccessToken();
+        try {
+            const response = await axios({
+                method: 'delete',
+                url: baseUrl + `/api/storages/${uuid}/`,
+                headers: {
+                    Authorization: `Bearer ${accessToken}`
+                },
+            }).then(
+                async ()=>{
+                    await auth.updateUser()
+                }
+            );
+        }catch (e){}
+    }
+
     const getSection = async (uuid) => {
+        let accessToken = await auth.getAccessToken();
         try {
             const response = await axios({
                 method: 'get',
                 url: baseUrl + `/api/sections/${uuid.toString()}`,
                 headers: {
-                    Authorization: `Bearer ${auth.accessToken.toString()}`
+                    Authorization: `Bearer ${accessToken}`
                 }
             });
-            return response.data;
+            const data = await response.data;
+            return data;
         } catch (e) {
             return null
         }
     }
 
     const getInstance = async (uuid) => {
+        let accessToken = await auth.getAccessToken();
         try {
             const response = await axios({
                 method: 'get',
                 url: baseUrl + `/api/instances/${uuid.toString()}`,
                 headers: {
-                    Authorization: `Bearer ${auth.accessToken.toString()}`
+                    Authorization: `Bearer ${accessToken}`
                 }
             });
-            return response.data;
+            const data = await response.data;
+            return data;
         } catch (e) {
             return null
         }
@@ -124,6 +156,11 @@ function useProvideApi() {
 
     return {
         getStorage,
-        postStorage
+        postStorage,
+        patchStorageName,
+        deleteStorage,
+        getSection,
+        getInstance,
+        getThing
     };
 }

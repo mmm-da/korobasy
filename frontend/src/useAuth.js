@@ -129,6 +129,26 @@ function useProvideAuth() {
         ;
     };
 
+    const updateUser = async () => {
+        let accessToken = await getAccessToken();
+        try {
+            const response = await axios({
+                method: 'get',
+                url: baseUrl + `/auth/users/me`,
+                headers: {
+                    Authorization: `Bearer ${accessToken}`
+                }
+            })
+            const userId = await response.data.id;
+            const userInfo = await getUserInfo(userId);
+            setUser(userInfo)
+        } catch (e) {
+            return null
+        }
+        ;
+    };
+
+
     if (loginStatus === 'loginSuccess' && user == null) {
         getUser().then(
             (result) => {
@@ -142,6 +162,7 @@ function useProvideAuth() {
         loginStatus,
         getAccessToken,
         setLoginStatus,
+        updateUser,
         user,
         login,
         logout

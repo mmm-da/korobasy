@@ -15,6 +15,7 @@ import StoragesView from "./views/StoragesView/StoragesView";
 import "./css/App.css"
 
 import {useAuth} from "./useAuth";
+import StorageView from "./views/StorageView/StorageView";
 
 
 export default function App() {
@@ -31,6 +32,7 @@ export default function App() {
                     <Route path="/reset_password" component={ResetView}/>
                     <Route path="/profile" component={ProfileView}/>
                     <Route path="/storages" component={StoragesView}/>
+                    <Route path="/storage/:id" component={StorageView}/>
                 </Switch>
             </div>
             <Footer/>
