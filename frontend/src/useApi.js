@@ -153,6 +153,65 @@ function useProvideApi() {
         }
     }
 
+    const postThing = async (name,description) => {
+        let accessToken = await auth.getAccessToken();
+        try {
+            const response = await axios({
+                method: 'post',
+                url: baseUrl + `/api/things/`,
+                headers: {
+                    Authorization: `Bearer ${accessToken}`
+                },
+                data: {
+                    category: '',
+                    name: name,
+                    description: description,
+                    tags: [],
+                    things_instances: []
+                }
+            });
+        } catch (e) {
+            return null
+        }
+    }
+
+    const postInstance = async (count,thing,section) => {
+        let accessToken = await auth.getAccessToken();
+        try {
+            const response = await axios({
+                method: 'post',
+                url: baseUrl + `/api/instance/`,
+                headers: {
+                    Authorization: `Bearer ${accessToken}`
+                },
+                data: {
+                    count: count,
+                    type: thing,
+                    section: section
+                }
+            });
+        } catch (e) {
+            return null
+        }
+    }
+
+    const getThings = async () => {
+        let accessToken = await auth.getAccessToken();
+        try {
+            const response = await axios({
+                method: 'get',
+                url: baseUrl + `/api/things/`,
+                headers: {
+                    Authorization: `Bearer ${accessToken}`
+                }
+            });
+            const data = await response.data
+            return data
+        } catch (e) {
+            return null
+        }
+    }
+
 
     return {
         getStorage,
@@ -161,6 +220,9 @@ function useProvideApi() {
         deleteStorage,
         getSection,
         getInstance,
-        getThing
+        getThing,
+        postThing,
+        postInstance,
+        getThings
     };
 }

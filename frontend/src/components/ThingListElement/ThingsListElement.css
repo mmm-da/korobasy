@@ -1,12 +1,5 @@
 .things-list-element {
-    display: grid;
-    grid-template-columns: 3em auto 30%;
-    grid-template-rows: 3em 3em;
-    gap: 0px 1%;
-    align-items: center;
-    grid-template-areas:
-    "icon title count"
-    "icon place reserve";
+    display: flex;
 
     padding: 1em;
     margin-bottom: 4px;
@@ -34,7 +27,7 @@ a {
 }
 
 .things-list-element-title {
-    grid-area: title;
+    text-align: center;
     font-size: 1.5em;
     justify-self: self-start;
 }

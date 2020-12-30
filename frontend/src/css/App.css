@@ -38,6 +38,24 @@ input {
     font-size: 1em;
 }
 
+select {
+    width: 280px;
+
+    text-align: center;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    outline: none;
+    text-align-last: center;
+    border-color: #EEA35D;
+    border-radius: 7px;
+    border-style: solid;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+
 button {
     height: 36px;
     padding: 10px 24px;
@@ -112,4 +130,9 @@ tr, td {
 
 h2{
     text-align: left;
+}
+
+option{
+    color: #3B434E;
+    background-color: #F6F5F1;
 }

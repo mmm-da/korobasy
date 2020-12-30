@@ -2,7 +2,7 @@
     margin: 8px 0 0 0;
     background: #F6F5F1;
     width: 100%;
-    padding: 20px 0px 20px 20px;
+    padding: 20px 0px 20px 0px;
     border-color: #EEA35D;
     border-radius: 7px;
     border-style: solid;
@@ -41,4 +41,13 @@
 
 .popup-content form{
     text-align: center;
+}
+
+.tooltip-form{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }

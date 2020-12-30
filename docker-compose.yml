@@ -1,6 +1,6 @@
 version: "3.8"
 
-services: 
+services:
   dev_backend:
     container_name: korobasy_dev_backend
     build:
@@ -43,7 +43,7 @@ services:
   database:
     container_name: korobasy_dev_postgres
     image: postgres:13
-    environment: 
+    environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=korobasy
